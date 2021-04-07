@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Password Manager</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<script src="https://kit.fontawesome.com/13c373d8b6.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+
+
+<div class="container-fluid">
+  
+<div class="row no-gutter">
+<div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+<div class="col-md-8 col-lg-6">
+  <div class="login d-flex align-items-center py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 col-lg-8 mx-auto">
+          <% if(success && success.length>0) {%>
+            <div class="alert alert-success d-flex">
+              <%=success%>
+            </div>
+            <br>
+          <% } %>
+          <% if(error && error.length>0) {%>
+            <div class="alert alert-danger d-flex">
+              <%=error%>
+            </div>
+            <br>
+          <% } %>
+          <h3 class="login-heading mb-4">Sign Up on PasswordMGR</h3>
+          <form action="/signup/createuser" method="POST">
+            <div class="form-label-group">
+              <input name="username" type="text" id="inputUser" class="form-control" placeholder="Username" required autofocus>
+              <label for="inputUser">Username</label>
+            </div>
+
+            <div class="form-label-group">
+              <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+              <label for="inputPassword">Password</label>
+            </div>
+
+            <div class="form-label-group">
+              <input name="confirmpassword" type="password" id="confirmPassword" class="form-control" placeholder="Confirm Password" required>
+              <label for="confirmPassword">Confirm Password</label>
+            </div>
+
+            <div class="form-label-group">
+              <input name="firstName" type="text" id="inputFname" class="form-control" placeholder="First Name" required>
+              <label for="inputfname">First Name</label>
+            </div>
+
+            <div class="form-label-group">
+              <input name="lastName" type="text" id="inputLname" class="form-control" placeholder="Last Name" required>
+              <label for="inputlname">Last Name</label>
+            </div>
+
+            <div class="form-label-group">
+              <input name="email" type="text" id="inputEmail" class="form-control" placeholder="E-Mail" required>
+              <label for="inputEmail">Email</label>
+            </div>
+
+            <button class="btn btn-lg btn-primary btn-block btn-login font-weight-bold mb-2" type="submit">Sign up
+            </button>
+            <br>
+            <h4 class="h4">Already have an account? <a href="/login">Login here.</a> </h4>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+</body>
+</html>

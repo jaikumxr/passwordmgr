@@ -1,0 +1,72 @@
+<%- include("partials/header") %>
+
+
+
+<div class="container mbody">
+  <% if(success && success.length>0) {%>
+  <div class="alert alert-success d-flex">
+    <%=success%>
+  </div>
+  <br>
+  <% } %>
+  <% if(error && error.length>0) {%>
+  <div class="alert alert-danger d-flex">
+    <%=error%>
+  </div>
+  <br>
+  <% } %>
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row my-2">
+        <div class="col-lg-4 col-md-6 col-sm-6 my-2">
+          <div class="card card-stats">
+            <div class="card-header card-header-warning card-header-icon">
+              <div class="card-icon">
+                <i class="material-icons">book</i>
+              </div>
+                <h3 class="card-title">View all passwords</h3>
+            </div>
+            <div class="card-footer">
+              <div class="stats">
+                <a href="/passwords" class="btn btn-primary">View</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 my-2">
+          <div class="card card-stats">
+            <div class="card-header card-header-success card-header-icon">
+              <div class="card-icon">
+                <i class="material-icons">edit</i>
+              </div>
+                <h3 class="card-title">Edit Passwords</h3>
+            </div>
+            <div class="card-footer">
+              <div class="stats">
+                <a href="/passwords/manage" class="btn btn-info">Manage</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 my-2">
+          <div class="card card-stats">
+            <div class="card-header card-header-danger card-header-icon">
+              <div class="card-icon">
+                <i class="material-icons">search</i>
+              </div>
+                <h3 class="card-title">Search Your Passwords</h3>
+            </div>
+            <div class="card-footer">
+              <div class="stats">
+                <a href="/search" class="btn btn-dark">Search</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<%- include("partials/footer") %>

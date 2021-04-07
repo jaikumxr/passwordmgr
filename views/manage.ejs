@@ -1,0 +1,52 @@
+<%- include("partials/header") %>
+
+<div class="container mbody">
+    <% if(success && success.length>0) {%>
+    <div class="alert alert-success d-flex">
+        <%=success%>
+    </div>
+    <br>
+    <% } %>
+    <% if(error && error.length>0) {%>
+    <div class="alert alert-danger d-flex">
+        <%=error%>
+    </div>
+    <br>
+    <% } %>
+    <div class="content">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-between mb-2">
+                <button class="btn btn-secondary" onclick="history.back()">Back</button>
+            </div>
+          <div class="row my-2">
+            <div class="col-lg-3 col-md-6 col-sm-6 my-2">
+              <div class="card card-stats bg-info text-white">
+                <div class="card-header card-header-success card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons">library_add</i>
+                  </div>
+                  <!-- <p class="card-category">Last entry by:</p> -->
+                  <a href="/passwords/add" class="stretched-link"></a>
+                  <h3 class="card-title">Add new</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 my-2">
+              <div class="card card-stats bg-warning">
+                <div class="card-header card-header-danger card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons">delete_forever</i>
+                  </div>
+                  <a href="/passwords/edit" class="stretched-link"></a>
+                  <h3 class="card-title">Edit/Remove</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+
+<%- include("partials/footer") %>
