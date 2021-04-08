@@ -2,7 +2,6 @@ var mongoose = require("mongoose");
 
 var passwordSchema = new mongoose.Schema({
     pname: String,
-    pid: Number,
     password: String,
     comments: {type: String, default: ""},
     publishedDate: Date,

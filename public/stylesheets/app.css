@@ -1,15 +1,20 @@
 html,body {
 	height: 100%;
+	background-color: #E3DEDE;
 }
 
 .imp {
 	color:red;
 }
 
-
 body {
 	display: flex;
 	flex-direction: column;
+}
+
+.table {
+	background-color: #fff;
+	border-radius: 15px;
 }
 
 .content {
@@ -83,7 +88,7 @@ body {
 }
 
 .bg-image {
-	background-image: url("https://www.thebalancesmb.com/thmb/gDGwxUG-ChTGW59R2QszYZoXuOQ=/2122x1194/smart/filters:no_upscale()/GettyImages-514235870-2-5718469c3df78c3fa2dea60d.jpg");
+	background-image: url("https://images.pexels.com/photos/1364700/pexels-photo-1364700.jpeg?cs=srgb&dl=pexels-logan-kirschner-1364700.jpg&fm=jpg");
 	background-size: cover;
 	background-position: center;
 }

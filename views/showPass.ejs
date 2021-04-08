@@ -1,0 +1,44 @@
+<%- include("partials/header") %>
+<div class="mbody container content">
+    <% if(success && success.length>0) {%>
+    <div class="alert alert-success">
+      <%=success%>
+    </div>
+    <% } %>
+    <% if(error && error.length>0) {%>
+    <div class="alert alert-danger">
+      <%=error%>
+    </div>
+    <% } %>
+    <div class="row">
+      <button class="btn btn-outline-secondary float-left" onClick="history.back()">Back</button>
+    </div>
+    <% password.forEach((passwd)=>{ %>
+     <div class="row justify-content-center">
+        <div class="card text-center my-2">
+          <div class="card-header">
+            <b>Password id: <%=  (passwd._id).toString().slice(0,5)+"*****" %>  </b>
+
+          </div>
+          <div class="card-body ">
+            <h5 class="card-title"><b>Website:</b> <%= passwd.pname %>  </h5>
+    
+            <p class="card-text text-justify"> 
+              <b>Comments: </b> <%= passwd.comments %> 
+              <br>
+              <b>Email Link:</b>
+              <form action="/passwords/mail/<%=passwd._id%>" method="POST">
+                <button class="btn btn-info"><i class="fas fa-envelope"></i></button>
+              </form> 
+            </p>
+          </div>
+          <div class="card-footer text-muted">
+            <b>Published: <%= passwd.publishedDate.toDateString() %>  </b> 
+            <br>
+            <b>Last Modified on: <%= passwd.lastModifiedDate.toDateString() %> </b> 
+          </div>
+          </div>
+      </div>
+    <% }) %>  
+</div>
+<%- include("partials/footer") %>
