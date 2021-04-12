@@ -16,8 +16,8 @@ const mailRoutes = require("./routes/mailPassword")
 
 //MongoDB config - comment either 19 or 20
 
-// mongoose.connect("mongodb+srv://burgerxd:iZmBmGdZBXvAGf9i@cluster0.e1l3y.mongodb.net/passwordmgr?retryWrites=true&w=majority", {
-mongoose.connect("mongodb://localhost:27017/passwordmgr", {
+mongoose.connect("mongodb+srv://burgerxd:iZmBmGdZBXvAGf9i@cluster0.e1l3y.mongodb.net/passwordmgr?retryWrites=true&w=majority", {
+// mongoose.connect("mongodb://localhost:27017/passwordmgr", {
     useNewUrlParser: true,
     'useUnifiedTopology': true
 });
